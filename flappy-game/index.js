@@ -45,7 +45,10 @@ var game = setInterval(function(){
 	
 	if(bar_position > container_width){
 		// giving variable to new height when it flactuates as player progesses 
-		var diff_height = parseInt(Math.floor(Math.random() * 100));  
+		var diff_height = parseInt(Math.floor(Math.random()) * 100);
+
+		bar_1.css('height',bar_initial_height + diff_height);
+		bar_2.css('height',bar_initial_height - diff_height);    
 
 		bar_position = bar_initial_position; 
 

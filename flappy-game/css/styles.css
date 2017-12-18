@@ -35,7 +35,7 @@ body {
 	height: 130px;
 	width: 50px;
 	background: #000;
-	right: 50px;
+	right: -50px;
 	
 }
 
@@ -51,7 +51,7 @@ body {
 	text-align: center;
 	font-size: 50px;
 	font-family: sans-serif;
-	color: #000080;
+	color: blue;
 }
 
 p {

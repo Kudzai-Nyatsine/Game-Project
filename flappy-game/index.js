@@ -44,7 +44,11 @@ var game = setInterval(function(){
 	// set the condition to enable the bar to keep moving
 	
 	if(bar_position > container_width){
-		bar_position = bar_initial_position;
+		// giving variable to new height when it flactuates as player progesses 
+		var diff_height = parseInt(Math.floor(Math.random() * 100));  
+
+		bar_position = bar_initial_position; 
+
 	}
 
 	bar.css('right',bar_position + speed); 

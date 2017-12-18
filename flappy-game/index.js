@@ -39,7 +39,7 @@ var speed = 10;
 
 var game = setInterval(function(){
 
-	var bar_position = parseInt(bar.css('right'));
+	 var bar_position = parseInt(bar.css('right'));
 
 	// set the condition to enable the bar to keep moving
 	
@@ -48,6 +48,6 @@ var game = setInterval(function(){
 	}
 
 	bar.css('right',bar_position + speed); 
-	},40)
+	},30)
 
 });

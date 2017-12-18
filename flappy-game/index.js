@@ -35,4 +35,11 @@ var character_left = parseInt(character.css('left'));
 var character_height = parseInt(character.height());
 var speed = 10;
 
+var game = setInterval(function(){
+
+	var bar_initial_position = parseInt(bar.css('right'));
+
+	bar.css('right',bar_initial_position + speed);
+	},40)
+
 });

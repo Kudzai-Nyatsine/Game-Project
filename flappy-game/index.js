@@ -35,11 +35,19 @@ var character_left = parseInt(character.css('left'));
 var character_height = parseInt(character.height());
 var speed = 10;
 
+// Used the Interval method to get the bars moving from right to left within 40 milliseconds
+
 var game = setInterval(function(){
 
-	var bar_initial_position = parseInt(bar.css('right'));
+	var bar_position = parseInt(bar.css('right'));
 
-	bar.css('right',bar_initial_position + speed);
+	// set the condition to enable the bar to keep moving
+	
+	if(bar_position > container_width){
+		bar_position = bar_initial_position;
+	}
+
+	bar.css('right',bar_position + speed); 
 	},40)
 
 });

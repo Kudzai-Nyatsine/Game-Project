@@ -14,6 +14,7 @@
 
 $(function(){
 
+// Saving Dom Objects to variables 
 var container = $('#container');
 var character = $('#character');
 var bar = $('.bar');
@@ -24,5 +25,13 @@ var speed = $('#speed');
 var score = $('#score');
 var reset_btn = $('#reset_btn');
 
-
 });
+
+//Declaring the game's characteristics
+var container_height = parseInt(container.height());
+var container_width = parseInt(container.width());
+var bar_initial_position = parseInt(bar.css('right'));
+var bar_initial_height = parseInt(bar.css('height'));
+var character_left = parseInt(character.css('left'));
+var character_height = parseInt(character.height());
+var speed = 10;

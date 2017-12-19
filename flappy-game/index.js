@@ -86,11 +86,30 @@ $(function(){
 
 	$(document).on('keydown',function(e){
 		var key = e.keyCode;
-		if (key === 38) {
+		if (key === 38 && move_up == false) {
 
 			move_up = setInterval(up, 50);
 		}
 	});
+
+	$(document).on('keyup',function(e){
+
+		var key = e.keyCode;
+
+		if (key === 38) {
+			
+			clearInterval(move_up);
+			move_up = false;
+		}
+	});
+
+
+	//function for the character to gain gravity as set in the above condition
+
+	function move_down() {
+			character.css('top',parseInt(character.css('top')) + 5);
+		}
+
 	// function to move the character upwards
 	function up(){
 

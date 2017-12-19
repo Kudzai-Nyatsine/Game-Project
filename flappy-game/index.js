@@ -45,7 +45,7 @@ $(function(){
 
 		// condition set when the character collides with the bars
 
-		if(collision(character,bar_1) || collision(character,bar_2)) {
+		if(collision(character,bar_1) || collision(character,bar_2) || parseInt(character.css('top')) <=0) {
 
 			terminate_the_game();
 

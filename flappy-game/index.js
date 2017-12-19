@@ -39,6 +39,10 @@ $(function(){
 
 	var move_up = false;
 
+	//score_update declaration
+
+	var score_update = false;
+
 	// Used the Interval method to get the bars moving from right to left within 40 milliseconds
 
 	var game = setInterval(function(){
@@ -61,8 +65,12 @@ $(function(){
 		 // update the scorecard when the bars pass the character successfully
 
 		 if (bar_position > container_width - character_left) {
-		 	
+
+		 	if (score_update === false) {
+
 		 	score.text(parseInt(score.text()) +1);
+		 	score_update = true;
+		 	}
 		 }
 
 		// set the condition to enable the bar to keep moving
@@ -80,6 +88,8 @@ $(function(){
 
 
 			acceleration_span.text(acceleration);
+
+			score_update = false;
 
 			bar_position = bar_initial_position; 
 

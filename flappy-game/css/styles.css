@@ -45,12 +45,7 @@ h1 {
 	
 }
 
-.box {
-	width: 70px;
-	height: 40px;
-	background: red;
-	display: inline-block;
-}
+
 
 #bar_1 {
 	top: 0;
@@ -69,6 +64,7 @@ h1 {
 
 p {
 	color: blue;
+	font-family: 'Alegreya', serif;
 }
 
 #reset_btn {

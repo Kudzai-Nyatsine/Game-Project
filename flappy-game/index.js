@@ -67,18 +67,20 @@ $(function(){
 
 		bar.css('right',bar_position + acceleration); 
 
+		// setting condition for the character's movement
+
 		if(move_up == false) {
 
 			move_down();
 		}
 
-		  function up() {
-        character.css('top', parseInt(character.css('top')) - 10);
-    }
 
+		function move_down() {
+			character.css('top',parseInt(character.css('top')) + 5);
+		}
+
+	
 	},35)
-
-
 
 });
 

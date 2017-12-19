@@ -43,6 +43,16 @@ $(function(){
 
 	var game = setInterval(function(){
 
+		// condition set when the character collides with the bars
+
+		if(collision(character,bar_1) || collision(character,bar_2)) {
+
+			terminate_the_game();
+
+		} else{
+
+		}
+
 		 var bar_position = parseInt(bar.css('right'));
 
 		// set the condition to enable the bar to keep moving
@@ -115,6 +125,8 @@ $(function(){
 
 		character.css('top',parseInt(character.css('top'))-10);
 	}
+
+	
 
 
 });

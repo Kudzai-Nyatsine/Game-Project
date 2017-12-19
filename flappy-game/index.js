@@ -10,6 +10,8 @@
 
 // Resets the game when character hits the bars and alert losing message
 
+// Get the reset button to work
+
 // Give a winning score
 
 $(function(){
@@ -154,6 +156,12 @@ $(function(){
 		clearInterval(game);
 		reset_btn.slideDown();
 	}
+
+	// reset button function
+
+	reset_btn.click(function(){
+		location.reload();
+	})
 
 	function collision($div1, $div2) {
         var x1 = $div1.offset().left;

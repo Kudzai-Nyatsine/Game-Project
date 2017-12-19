@@ -2,7 +2,7 @@ body {
 	height: 100%;
 	width: 100%;
 	margin: 0;
-	background: #f4f0f4f0;
+	/*background: url('jungle.jpg');*/
 	background-size: 100%;
 }
 
@@ -55,11 +55,12 @@ h1 {
 	bottom: 0;
 }
 
-#score {
+#score-card {
 	text-align: center;
 	font-size: 50px;
 	font-family: sans-serif;
-	color: blue;
+	color: #fff;
+
 }
 
 p {

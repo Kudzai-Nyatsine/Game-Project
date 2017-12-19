@@ -45,15 +45,25 @@ $(function(){
 
 		// condition set when the character collides with the bars
 
-		if(collision(character,bar_1) || collision(character,bar_2) || parseInt(character.css('top')) <=0) {
+        if (collision(character, bar_1) || collision(character, bar_2) || parseInt(character.css('top')) <= 0 
+        	|| parseInt(character.css('top')) > container_height - character_height) {
 
-			terminate_the_game();
+            terminate_the_game();
 
-		} else{
+        } 
+
+	 else{
 
 		}
 
 		 var bar_position = parseInt(bar.css('right'));
+
+		 // update the scorecard when the bars pass the character successfully
+
+		 if (bar_position > container_width - character_left) {
+		 	
+		 	score.text(parseInt(score.text()) +1);
+		 }
 
 		// set the condition to enable the bar to keep moving
 		 

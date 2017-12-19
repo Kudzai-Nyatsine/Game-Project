@@ -1,10 +1,10 @@
 //Get the page to respond to jQuery
 
-//Make the character move up and down when selected 
+//Increase the speed as the game progresses 
 
 // Get the background to move when bird moves 
 
-//Increase the speed as the game progresses 
+//Make the character move up and down when selected 
 
 // Record the scores when character moves in between the bars 
 
@@ -58,6 +58,7 @@ $(function(){
 
 			acceleration = acceleration + 0.5;
 
+
 			acceleration_span.text(acceleration);
 
 			bar_position = bar_initial_position; 
@@ -69,11 +70,12 @@ $(function(){
 
 		// setting condition for the character's movement
 
-		if(move_up == false) {
+		if(move_up === false) {
 
 			move_down();
 		}
 
+		//function for the character to gain gravity as set in the above condition
 
 		function move_down() {
 			character.css('top',parseInt(character.css('top')) + 5);
@@ -81,6 +83,20 @@ $(function(){
 
 	
 	},35)
+
+	$(document).on('keydown',function(e){
+		var key = e.keyCode;
+		if (key === 38) {
+
+			move_up = setInterval(up, 50);
+		}
+	});
+	// function to move the character upwards
+	function up(){
+
+		character.css('top',parseInt(character.css('top'))-10);
+	}
+
 
 });
 

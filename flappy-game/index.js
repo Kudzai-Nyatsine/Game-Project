@@ -45,6 +45,8 @@ $(function(){
 
 	var score_update = false;
 
+	var game_over = false;
+
 	// Used the Interval method to get the bars moving from right to left within 40 milliseconds
 
 	var game = setInterval(function(){
@@ -118,7 +120,7 @@ $(function(){
 
 	$(document).on('keydown',function(e){
 		var key = e.keyCode;
-		if (key === 38 && move_up == false) {
+		if (key === 38 && move_up == false && game_over === false) {
 
 			move_up = setInterval(up, 50);
 		}
@@ -154,6 +156,7 @@ $(function(){
 	function terminate_the_game(){
 
 		clearInterval(game);
+		game_over = true;
 		reset_btn.slideDown();
 	}
 

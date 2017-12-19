@@ -2,8 +2,13 @@ body {
 	height: 100%;
 	width: 100%;
 	margin: 0;
-	background: #f0f0f0f0;
+	background: #f4f0f4f0;
 	background-size: 100%;
+}
+
+h1 {
+	text-align: center;
+	color:blue;
 }
 
 #container {
@@ -40,6 +45,13 @@ body {
 	
 }
 
+.box {
+	width: 70px;
+	height: 40px;
+	background: red;
+	display: inline-block;
+}
+
 #bar_1 {
 	top: 0;
 }
@@ -56,7 +68,7 @@ body {
 }
 
 p {
-	color: #cd0000;
+	color: blue;
 }
 
 #reset_btn {

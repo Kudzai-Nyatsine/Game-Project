@@ -14,47 +14,74 @@
 
 $(function(){
 
-// Saving Dom Objects to variables 
-var container = $('#container');
-var character = $('#character');
-var bar = $('.bar');
-var bar_1 = $('#bar_1');
-var bar_2 = $('#bar_2');
-var score = $('#score');
-var speed = $('#speed');
-var score = $('#score');
-var reset_btn = $('#reset_btn');
+	// Saving Dom Objects to variables 
+	var container = $('#container');
+	var character = $('#character');
+	var bar = $('.bar');
+	var box = $('.box')
+	var bar_1 = $('#bar_1');
+	var bar_2 = $('#bar_2');
+	var score = $('#score');
+	var acceleration_span = $('#acceleration');
+	var reset_btn = $('#reset_btn');
 
 
-//Declaring the game's characteristics
-var container_height = parseInt(container.height());
-var container_width = parseInt(container.width());
-var bar_initial_position = parseInt(bar.css('right'));
-var bar_initial_height = parseInt(bar.css('height'));
-var character_left = parseInt(character.css('left'));
-var character_height = parseInt(character.height());
-var speed = 12;
+	//Declaring the game's characteristics
+	var container_height = parseInt(container.height());
+	var container_width = parseInt(container.width());
+	var bar_initial_position = parseInt(bar.css('right'));
+	var bar_initial_height = parseInt(bar.css('height'));
+	var character_left = parseInt(character.css('left'));
+	var character_height = parseInt(character.height());
+	var acceleration = 11;
 
-// Used the Interval method to get the bars moving from right to left within 40 milliseconds
+	// Event declaration
 
-var game = setInterval(function(){
+	var move_up = false;
 
-	 var bar_position = parseInt(bar.css('right'));
+	// Used the Interval method to get the bars moving from right to left within 40 milliseconds
 
-	// set the condition to enable the bar to keep moving
-	
-	if(bar_position > container_width){
-		// giving variable to new height when it flactuates as player progesses 
-		var diff_height = parseInt(Math.floor(Math.random()) * 100);
+	var game = setInterval(function(){
 
-		bar_1.css('height',bar_initial_height + diff_height);
-		bar_2.css('height',bar_initial_height - diff_height);    
+		 var bar_position = parseInt(bar.css('right'));
 
-		bar_position = bar_initial_position; 
+		// set the condition to enable the bar to keep moving
+		 
+		if(bar_position > container_width){
+			// giving variable to new height when it flactuates as player progesses 
+			var diff_height = parseInt(Math.floor(Math.random() * 100));
 
-	}
+			bar_1.css('height',bar_initial_height + diff_height);
+			bar_2.css('height',bar_initial_height - diff_height);
 
-	bar.css('right',bar_position + speed); 
+			// increase the acceleration
+
+			acceleration = acceleration + 0.5;
+
+			acceleration_span.text(acceleration);
+
+			bar_position = bar_initial_position; 
+
+
+		}
+
+		bar.css('right',bar_position + acceleration); 
+
+		if(move_up == false) {
+
+			move_down();
+		}
+
+		  function up() {
+        character.css('top', parseInt(character.css('top')) - 10);
+    }
+
 	},35)
 
+
+
 });
+
+
+
+

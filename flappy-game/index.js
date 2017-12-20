@@ -16,21 +16,15 @@
 $(function(){
 
 	// Saving Dom Objects to variables 
-	var container = $('#container');
 	var character = $('#character');
-	var bar = $('.bar');
-	var bar_1 = $('#bar_1');
-	var bar_2 = $('#bar_2');
-	var score = $('#score');
-	
 
 	//Declaring the game's characteristics
-	var container_height = parseInt(container.height());
-	var container_width = parseInt(container.width());
-	var bar_initial_position = parseInt(bar.css('right'));
-	var bar_initial_height = parseInt(bar.css('height'));
-	var character_left = parseInt(character.css('left'));
-	var character_height = parseInt(character.height());
+	var container_height = parseInt($('#container').height());
+	var container_width = parseInt($('#container').width());
+	var bar_initial_position = parseInt($('.bar').css('right'));
+	var bar_initial_height = parseInt($('.bar').css('height'));
+	var character_left = parseInt($('#character').css('left'));
+	var character_height = parseInt($('#character').height());
 	var acceleration = 18;
 
 	// Event declaration
@@ -50,10 +44,10 @@ $(function(){
 
 
 		// condition set when the character collides with the bars
-          var topBarCollision = collision(character, bar_1);
-          var bottomBarCollision = collision(character, bar_2);
-          var ceilingCollision = parseInt(character.css('top')) <= 0;
-          var floorCollision = parseInt(character.css('top')) > container_height - character_height;
+          var topBarCollision = collision($('#character'), $('#bar_1'));
+          var bottomBarCollision = collision($('#character'), $('#bar_2'));
+          var ceilingCollision = parseInt($('#character').css('top')) <= 0;
+          var floorCollision = parseInt($('#character').css('top')) > container_height - character_height;
 
         if ( topBarCollision || bottomBarCollision || ceilingCollision || floorCollision) {
        
@@ -62,7 +56,7 @@ $(function(){
         } 
 
 
-		 var bar_position = parseInt(bar.css('right'));
+		 var bar_position = parseInt($('.bar').css('right'));
 
 		 // update the scorecard when the bars pass the character successfully
 
@@ -70,7 +64,7 @@ $(function(){
 
 		 	if (score_update === false) {
 
-		 	score.text(parseInt(score.text()) + 2);
+		 	$('#score').text(parseInt($('#score').text()) + 2);
 		 	score_update = true;
 		 	}
 		 }
@@ -83,8 +77,8 @@ $(function(){
 			// giving variable to new height when it flactuates as player progesses 
 			var diff_height = parseInt(Math.floor(Math.random() * 100));
 
-			bar_1.css('height',bar_initial_height + diff_height);
-			bar_2.css('height',bar_initial_height - diff_height);
+			$('#bar_1').css('height',bar_initial_height + diff_height);
+			$('#bar_2').css('height',bar_initial_height - diff_height);
 
 			// increase the acceleration
 
@@ -100,7 +94,7 @@ $(function(){
 
 		}
 
-		bar.css('right',bar_position + acceleration); 
+		$('.bar').css('right',bar_position + acceleration); 
 
 		// setting condition for the character's movement
 
@@ -112,7 +106,7 @@ $(function(){
 		//function for the character to gain gravity as set in the above condition
 
 		function move_down() {
-			character.css('top',parseInt(character.css('top')) + 5);
+			$('#character').css('top',parseInt($('#character').css('top')) + 5);
 		}
 
 	},35);
@@ -140,12 +134,12 @@ $(function(){
 	//function for the character to gain gravity as set in the above condition
 
 	function move_down() {
-			character.css('top',parseInt(character.css('top')) + 5);
+			$('#character').css('top',parseInt($('#character').css('top')) + 5);
 		}
 	// function to move the character upwards
 	function up(){
 
-		character.css('top',parseInt(character.css('top'))-10);
+		$('#character').css('top',parseInt($('#character').css('top'))-10);
 	}
 //function to stop the game when character collides with the bars
 

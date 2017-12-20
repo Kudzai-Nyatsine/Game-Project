@@ -32,7 +32,7 @@ $(function(){
 	var bar_initial_height = parseInt(bar.css('height'));
 	var character_left = parseInt(character.css('left'));
 	var character_height = parseInt(character.height());
-	var acceleration = 15;
+	var acceleration = 18;
 
 	// Event declaration
 

@@ -25,11 +25,8 @@ $(function(){
 	var acceleration = 18;
 
 	// Event declaration
-
 	var move_up = false;
-
 	//score_update declaration
-
 	var score_update = false;
 
 	var game_over = false;
@@ -37,8 +34,6 @@ $(function(){
 	// Used the Interval method to get the bars moving from right to left within 40 milliseconds
 
 	var game = setInterval(function(){
-
-
 
 		// condition set when the character collides with the bars
           var topBarCollision = collision($('#character'), $('#bar_1'));
@@ -48,10 +43,8 @@ $(function(){
 
         if ( topBarCollision || bottomBarCollision || ceilingCollision || floorCollision) {
        
-
             terminate_the_game();
         } 
-
 
 		 var bar_position = parseInt($('.bar').css('right'));
 
@@ -69,7 +62,6 @@ $(function(){
 
 		// saving score 
 
-		 
 		if(bar_position > container_width){
 			// giving variable to new height when it flactuates as player progesses 
 			var diff_height = parseInt(Math.floor(Math.random() * 100));

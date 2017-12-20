@@ -19,7 +19,6 @@ $(function(){
 	var container = $('#container');
 	var character = $('#character');
 	var bar = $('.bar');
-	var box = $('.box')
 	var bar_1 = $('#bar_1');
 	var bar_2 = $('#bar_2');
 	var score = $('#score');
@@ -56,7 +55,6 @@ $(function(){
         	|| parseInt(character.css('top')) > container_height - character_height) {
 
             terminate_the_game();
-
         } 
 
 	 else{
@@ -75,7 +73,6 @@ $(function(){
 		 	score_update = true;
 		 	}
 		 }
-
 		// set the condition to enable the bar to keep moving
 		 
 		if(bar_position > container_width){
@@ -114,8 +111,9 @@ $(function(){
 			character.css('top',parseInt(character.css('top')) + 5);
 		}
 
-	
-	},35)
+	},35);
+
+// functions to set the key events
 
 	$(document).on('keydown',function(e){
 		var key = e.keyCode;
@@ -135,21 +133,16 @@ $(function(){
 			move_up = false;
 		}
 	});
-
-
 	//function for the character to gain gravity as set in the above condition
 
 	function move_down() {
 			character.css('top',parseInt(character.css('top')) + 5);
 		}
-
 	// function to move the character upwards
 	function up(){
 
 		character.css('top',parseInt(character.css('top'))-10);
 	}
-
-	
 //function to stop the game when character collides with the bars
 
 	function terminate_the_game(){
@@ -164,7 +157,7 @@ $(function(){
 	reset_btn.click(function(){
 		location.reload();
 	})
-
+//function to set collision of the character 
 	function collision($div1, $div2) {
         var x1 = $div1.offset().left;
         var y1 = $div1.offset().top;
@@ -182,8 +175,6 @@ $(function(){
         if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2) return false;
         return true;
     }
-
-
 });
 
 

@@ -10,13 +10,6 @@
 
 // Resets the game when character hits the bars and alert losing message
 
-// Get the reset button to work
-// for(var i = 0; i < 100; i++){
-
-// var diff_height = parseInt(Math.floor(Math.random() * 50));
-
-// console.log(i);
-// }
 $(function(){
 
 	//Declaring the game's characteristics

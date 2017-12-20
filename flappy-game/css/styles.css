@@ -56,15 +56,15 @@ h1 {
 
 #bar_2 {
 	bottom: 0;
+	background-color: red;
 }
-
 #score-card {
 	text-align: center;
 	font-size: 50px;
 	font-family: 'Cairo', sans-serif;
 	color: #fff;
 	background: #000;
-	
+
 
 }
 

@@ -48,17 +48,20 @@ $(function(){
 
 	var game = setInterval(function(){
 
-		// condition set when the character collides with the bars
 
-        if (collision(character, bar_1) || collision(character, bar_2) || parseInt(character.css('top')) <= 0 
-        	|| parseInt(character.css('top')) > container_height - character_height) {
+
+		// condition set when the character collides with the bars
+          var topBarCollision = collision(character, bar_1);
+          var bottomBarCollision = collision(character, bar_2);
+          var ceilingCollision = parseInt(character.css('top')) <= 0;
+          var floorCollision = parseInt(character.css('top')) > container_height - character_height;
+
+        if ( topBarCollision || bottomBarCollision || ceilingCollision || floorCollision) {
+       
 
             terminate_the_game();
         } 
 
-	 else{
-
-		}
 
 		 var bar_position = parseInt(bar.css('right'));
 
@@ -171,12 +174,11 @@ $(function(){
         var b2 = y2 + h2;
         var r2 = x2 + w2;
 
-        if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2) return false;
+        if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2) {
+        	return false;
+        }else {
         return true;
+    	}
     }
 
 });
-
-
-
-

@@ -68,7 +68,7 @@ $(function(){
 
 		 	if (score_update === false) {
 
-		 	score.text(parseInt(score.text()) +1);
+		 	score.text(parseInt(score.text()) + 2);
 		 	score_update = true;
 		 	}
 		 }

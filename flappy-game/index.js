@@ -22,8 +22,7 @@ $(function(){
 	var bar_1 = $('#bar_1');
 	var bar_2 = $('#bar_2');
 	var score = $('#score');
-	var acceleration_span = $('#acceleration');
-	var reset_btn = $('#reset_btn');
+	
 
 	//Declaring the game's characteristics
 	var container_height = parseInt(container.height());
@@ -76,6 +75,9 @@ $(function(){
 		 	}
 		 }
 		// set the condition to enable the bar to keep moving
+
+		// saving score 
+
 		 
 		if(bar_position > container_width){
 			// giving variable to new height when it flactuates as player progesses 
@@ -89,7 +91,7 @@ $(function(){
 			acceleration = acceleration + 0.5;
 
 
-			acceleration_span.text(acceleration);
+			$('#acceleration').text(acceleration);
 
 			score_update = false;
 
@@ -151,12 +153,12 @@ $(function(){
 
 		clearInterval(game);
 		game_over = true;
-		reset_btn.slideDown();
+		$('#reset_btn').slideDown();
 	}
 
 	// reset button function
 
-	reset_btn.click(function(){
+	$('#reset_btn').click(function(){
 		location.reload();
 	})
 //function to set collision of the character 

@@ -11,8 +11,12 @@
 // Resets the game when character hits the bars and alert losing message
 
 // Get the reset button to work
+// for(var i = 0; i < 100; i++){
 
+// var diff_height = parseInt(Math.floor(Math.random() * 50));
 
+// console.log(i);
+// }
 $(function(){
 
 	//Declaring the game's characteristics
@@ -64,10 +68,18 @@ $(function(){
 
 		if(bar_position > container_width){
 			// giving variable to new height when it flactuates as player progesses 
-			var diff_height = parseInt(Math.floor(Math.random() * 100));
+
+			var diff_height = parseInt(Math.floor(Math.random() * 120 		));
+			var negative = parseInt(Math.floor(Math.random() * 2));
+
+			if(negative === 0){
+				diff_height = diff_height * -1;
+			}
 
 			$('#bar_1').css('height',bar_initial_height + diff_height);
 			$('#bar_2').css('height',bar_initial_height - diff_height);
+
+
 
 			// increase the acceleration
 

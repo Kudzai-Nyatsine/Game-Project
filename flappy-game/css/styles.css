@@ -2,13 +2,16 @@ body {
 	height: 100%;
 	width: 100%;
 	margin: 0;
-	/*background: url('jungle.jpg');*/
+	background: url('air.jpg');
 	background-size: 100%;
 }
 
 h1 {
 	text-align: center;
-	color:blue;
+	color:#fff;
+	font-size: 45px;
+	font-family: 'Gloria Hallelujah', cursive;
+
 }
 
 #container {
@@ -17,7 +20,7 @@ h1 {
 	background-image: url('sky.jpg');
 	background-size: 100%;
 	background-repeat: no-repeat;
-	border:2px solid blue;
+	border:5px solid #000;
 	margin-left: 4%;
 	margin-top: 4%;
 	overflow: hidden;
@@ -26,9 +29,9 @@ h1 {
 
 #character {
 	position: absolute;
-	width: 65px;
-	height: 42px;
-	background-image: url('bird.png');
+	width: 75px;
+	height: 50px;
+	background-image: url('flamingo.png');
 	background-size: contain;
 	background-repeat: no-repeat;
 	top: 20%;
@@ -40,7 +43,7 @@ h1 {
 	position: absolute;
 	height: 130px;
 	width: 50px;
-	background: grey;
+	background: #000;
 	right: -50px;
 	
 }
@@ -58,14 +61,17 @@ h1 {
 #score-card {
 	text-align: center;
 	font-size: 50px;
-	font-family: sans-serif;
+	font-family: 'Cairo', sans-serif;
 	color: #fff;
+	background: #000;
+
 
 }
 
 p {
-	color: blue;
+	color: #fff;
 	font-family: 'Alegreya', serif;
+
 }
 
 #reset_btn {
@@ -73,10 +79,11 @@ p {
 	top: 0;
 	width: 100%;
 	padding: 20px;
-	background: purple;
+	background: #000;
 	color: #fff;
-	font-size: 30px;
+	font-size: 62px;
 	border:none;
 	display: none;
 	cursor: pointer;
+	font-family: 'Gloria Hallelujah', cursive;
 }

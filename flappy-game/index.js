@@ -12,7 +12,6 @@
 
 // Get the reset button to work
 
-// Give a winning score
 
 $(function(){
 

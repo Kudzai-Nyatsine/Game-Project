@@ -25,7 +25,6 @@ $(function(){
 	var acceleration_span = $('#acceleration');
 	var reset_btn = $('#reset_btn');
 
-
 	//Declaring the game's characteristics
 	var container_height = parseInt(container.height());
 	var container_width = parseInt(container.width());

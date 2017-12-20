@@ -15,9 +15,6 @@
 
 $(function(){
 
-	// Saving Dom Objects to variables 
-	var character = $('#character');
-
 	//Declaring the game's characteristics
 	var container_height = parseInt($('#container').height());
 	var container_width = parseInt($('#container').width());
@@ -90,8 +87,6 @@ $(function(){
 			score_update = false;
 
 			bar_position = bar_initial_position; 
-
-
 		}
 
 		$('.bar').css('right',bar_position + acceleration); 
@@ -102,17 +97,12 @@ $(function(){
 
 			move_down();
 		}
-
 		//function for the character to gain gravity as set in the above condition
-
 		function move_down() {
 			$('#character').css('top',parseInt($('#character').css('top')) + 5);
 		}
-
 	},35);
-
 // functions to set the key events
-
 	$(document).on('keydown',function(e){
 		var key = e.keyCode;
 		if (key === 38 && move_up == false && game_over === false) {
@@ -142,14 +132,12 @@ $(function(){
 		$('#character').css('top',parseInt($('#character').css('top'))-10);
 	}
 //function to stop the game when character collides with the bars
-
 	function terminate_the_game(){
 
 		clearInterval(game);
 		game_over = true;
 		$('#reset_btn').slideDown();
 	}
-
 	// reset button function
 
 	$('#reset_btn').click(function(){
@@ -176,5 +164,4 @@ $(function(){
         return true;
     	}
     }
-
 });

@@ -21,6 +21,7 @@ $(function(){
 	var character_height = parseInt($('#character').height());
 	var acceleration = 25;
 
+
 	// Event declaration
 	var move_up = false;
 	//score_update declaration

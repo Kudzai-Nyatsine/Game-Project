@@ -30,7 +30,7 @@ The game was developed using technologies such as;
 
 # Installation
 
-- Install this game by cloning it from my github repositoty onto your own pc.
+- Install this game by cloning it from my [github repository](https://github.com/Kudzai-Nyatsine/Game-Project/tree/moving-character-feature) onto your own pc.
 
 
 

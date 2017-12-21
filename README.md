@@ -1,6 +1,6 @@
 # The Flapping Flamingo
 
-The Flapping Flamingo is a single player 2d online browser game.
+The Flapping Flamingo is a single player, 2d online browser game.
 
 ![](https://s3.mzstatic.com/us/r30/Purple5/v4/92/ba/42/92ba42f2-ae4a-8e37-dba8-33226bafed2b/mzl.fdmjrsbb.png )
 

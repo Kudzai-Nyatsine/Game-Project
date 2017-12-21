@@ -25,7 +25,7 @@ h1 {
 	background-repeat: no-repeat;
 	border:5px solid #000;
 	margin-left: 4%;
-	margin-top: 4%;
+	margin-top: 10%;
 	overflow: hidden;
 	position: relative;
 	
@@ -100,19 +100,23 @@ p {
 	}
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 750px) {
     body {
         display: block;
         width: 100%;
     }
 
-    #container {
-    	width: 100%;
+  #container {
+    width: 100vw;
+    margin-top: 5%;
+    margin-left: 0;
+    background-size: 100%;
+	background-repeat: no-repeat;
     }
 
     .bar {
 	position: absolute;
-	height: 70px;
+	height: 100px;
 	width: 25px;
 	background: #000;
 	right: -50px;
@@ -126,7 +130,16 @@ p {
 
 #bar_2 {
 	bottom: 0;
+
 	}
 
+	#score-card p {
+	text-align: center;
+	font-size: 16px;
+	font-family: 'Cairo', sans-serif;
+	color: #fff;
+	background: #000;
+
+	}
 
 }

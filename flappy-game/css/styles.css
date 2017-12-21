@@ -63,11 +63,16 @@ h1 {
 
 #score-card {
 	text-align: center;
-	font-size: 50px;
-	font-family: 'Cairo', sans-serif;
+	font-size: 40px;
+	/*font-family: 'Cairo', sans-serif;*/
 	color: #fff;
 	background: #000;
 
+
+}
+
+#score-card p {
+	font-family: 'Gloria Hallelujah', cursive;
 
 }
 

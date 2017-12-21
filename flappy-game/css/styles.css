@@ -6,6 +6,7 @@ body {
 	margin: 0;
 	background: url('../images/air.jpg');
 	background-size: 100%;
+	animation: moveBackground 20s linear infinite;
 }
 
 h1 {
@@ -27,6 +28,7 @@ h1 {
 	margin-top: 4%;
 	overflow: hidden;
 	position: relative;
+	
 }
 
 #character {
@@ -52,7 +54,7 @@ h1 {
 
 #bar_1 {
 	top: 0;
-	
+
 }
 
 #bar_2 {
@@ -87,4 +89,13 @@ p {
 	display: none;
 	cursor: pointer;
 	font-family: 'Gloria Hallelujah', cursive;
+}
+
+
+@keyframes moveBackground {
+	from {
+		background-position: 0 0;
+	} to {
+		background-position: -1000px;
+	}
 }

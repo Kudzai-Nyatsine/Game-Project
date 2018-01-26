@@ -2,27 +2,38 @@ body {
 	height: 100%;
 	width: 100%;
 	margin: 0;
-	background: grey;
+	background: url('../images/air.jpg');
+	background-size: 100%;
+	animation: moveBackground 20s linear infinite;
+}
+
+h1 {
+	text-align: center;
+	color:#fff;
+	font-size: 45px;
+	font-family: 'Gloria Hallelujah', cursive;
+
 }
 
 #container {
 	height: 400px;
 	width: 90%;
-	background-image: url('sky.jpg');
+	background-image: url('../images/sky.jpg');
 	background-size: 100%;
 	background-repeat: no-repeat;
-	border:2px solid blue;
+	border:5px solid #000;
 	margin-left: 4%;
-	margin-top: 4%;
+	margin-top: 5%;
 	overflow: hidden;
 	position: relative;
+	
 }
 
 #character {
 	position: absolute;
-	width: 65px;
-	height: 42px;
-	background-image: url('bird.png');
+	width: 75px;
+	height: 50px;
+	background-image: url('../images/flamingo.png');
 	background-size: contain;
 	background-repeat: no-repeat;
 	top: 20%;
@@ -35,38 +46,107 @@ body {
 	height: 130px;
 	width: 50px;
 	background: #000;
-	right: 50px;
+	right: -50px;
 	
 }
 
 #bar_1 {
 	top: 0;
+
 }
 
 #bar_2 {
 	bottom: 0;
 }
 
-#score {
+#score-card {
 	text-align: center;
-	font-size: 50px;
-	font-family: sans-serif;
-	color: #000080;
+	font-size: 40px;
+	color: #fff;
+	background: #000;
+	margin-top:6%;
+
+
 }
 
-p {
-	color: #cd0000;
+#score-card p {
+	font-family: 'Gloria Hallelujah', cursive;
+
 }
+
+
+p {
+	color: #fff;
+	font-family: 'Alegreya', serif;
+	margin: 0;
+}
+
+
+
 
 #reset_btn {
 	position: absolute;
 	top: 0;
 	width: 100%;
 	padding: 20px;
-	background: purple;
+	background: #000;
 	color: #fff;
-	font-size: 30px;
+	font-size: 62px;
 	border:none;
 	display: none;
 	cursor: pointer;
+	font-family: 'Gloria Hallelujah', cursive;
+}
+
+
+@keyframes moveBackground {
+	from {
+		background-position: 0 0;
+	} to {
+		background-position: -1000px;
+	}
+}
+
+@media only screen and (max-width: 750px) {
+    body {
+        display: block;
+        width: 100%;
+    }
+
+  #container {
+    width: 100vw;
+    margin-top: 5%;
+    margin-left: 0;
+    background-size: 100%;
+	background-repeat: no-repeat;
+    }
+
+    .bar {
+	position: absolute;
+	height: 130px;
+	width: 30px;
+	background: #000;
+	right: -50px;
+	
+	}
+
+	#bar_1 {
+	top: 0;
+
+	}
+
+	#bar_2 {
+	bottom: 0;
+
+	}
+
+	#score-card p {
+	text-align: center;
+	font-size: 16px;
+	font-family: 'Cairo', sans-serif;
+	color: #fff;
+	background: #000;
+
+	}
+
 }

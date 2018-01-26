@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Flappy Bird</title>
+	<title>The Flapping Flamingo</title>
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Cairo|Gloria+Hallelujah" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript" src="index.js"></script>
 </head>
 <body>
+	<h1>The Flapping Flamingo</h1>
 	<div id="container">
 		<div id="character" >
 			 
 		</div>
 		<div id="bar_1" class="bar"></div>
-		<div id="bars_2" class="bar"></div>
+		<div id="bar_2" class="bar"></div>
 	</div>
-	<div id="score">
-		<p><b>Score:</b><span id="score">0</span></p>
-		<p><b>Speed:</b><span id="speed">0</span></p>
+	<div id="score-card">
+		<p><b>Score:</b><span id="score"> 0</span></p>
+		<p><b>Speed:</b><span id="acceleration"> 25</span></p>
 	</div>
-
-	<button id="reset_btn">Reset</button>
+	<button id="reset_btn">Start</button>
+	<audio controls autoplay>
+  		<source src="game.mp3" type="audio/mpeg">
+	</audio>
 </body>
 </html>
